@@ -1,0 +1,48 @@
+<!-- Katie Greenwood, 11.18.25 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gas bill</title>
+  </head>
+  <body>
+    <h1> What is the purpose of a function? </h1>
+    <h2>The purpose of a function rests in the ability to reuse code. If one were to make a function to code putting together a sandwich, they would only have to make one block of code within the function and later reuse it with specific parameters rather than writing slightly different code over and over.</h2>
+    <h2>Hit F12 to see the console log.</h2>
+
+    <script>
+      let entryCount = 0;
+      let name = prompt("What is your name?");
+      let gasAverage = calcAvgGas();
+      confirm(name + "'s average weekly gas bill is $" + gasAverage.toFixed(2));
+      if (entryCount === 0){
+        confirm("No gas totals were entered.");
+      }
+      else if (entryCount === 1){
+        confirm("You entered " + entryCount + " gas total.");
+      }
+      else {
+        confirm("You entered " + entryCount + " gas totals.");
+      }
+      function calcAvgGas(){
+        let count = 0;
+        let total = 0;
+        gasBill = parseFloat(prompt("Enter your week's gas bill. Enter -1 when you are done."));
+        while (gasBill !== -1){
+          total = total + gasBill;
+          count++;
+          gasBill = parseFloat(prompt("Enter your week's gas bill. Enter -1 when you are done."));
+        }
+        let averageGas;
+        if (count > 0) {
+          averageGas = total / count;
+        }else{
+          averageGas = 0;
+        }
+        entryCount = count;
+        return averageGas;
+      }
+    </script>
+  </body>
+</html>

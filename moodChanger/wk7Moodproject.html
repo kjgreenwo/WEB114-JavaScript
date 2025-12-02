@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mood Changer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      min-height: 100vh;
+    }
+    h1 { 
+      font-size: 3rem; 
+      margin-bottom: 20px; 
+    }
+
+    #moodButtons {
+      margin: 20px 0;
+    }
+
+    .mood-btn {
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .mood-btn:hover { transform: scale(1.05); }
+
+    #moodDisplay {
+      margin-top:
+      30px; font-size: 1.5rem; 
+      font-style: italic;
+      }
+
+   section{
+    text-align: left;
+    font-size: 1rem;
+   }
+
+  </style>
+</head>
+<body>
+  <section>
+  <h1> Questions</h1>  
+  <h3>1. Why is the JavaScript textContent property safer than innerHTML?</h3>
+  <p>innerHTML would actually edit the HTML!!</p>
+
+  <h3>2. If you use an HTML text box on a page and it has an attribute (for example <code>id="text"</code>)  and a corresponding DOM property--for example, <code>const box = document.getElementById("text")</code>. 
+    How do the two elements relate? </h3>
+  <p>The DOM property would know to grab from only the text box with the id (in this case, "text") specified.</p>
+
+  <h3>3. What would happen to the text box with id="text" if it added this line to the code above: <code>text.textContent = "Hello!"</code></h3>
+  <p>It would change the text written before into "Hello!" upon being activated.</p>
+  </section>
+
+  <h1> Exercises</h1>
+  <h2>How are you feeling?</h2>
+  <p>Click a mood to change the vibe!</p>
+
+  <!-- Button container -->
+  <div id="moodButtons">
+    <button class="mood-btn" data-mood="happy">Happy</button>
+    <button class="mood-btn" data-mood="calm">Calm</button>
+    <button class="mood-btn" data-mood="excited">Excited</button>
+    <button class="mood-btn" data-mood="chill">Chill</button>
+    <button class="mood-btn" data-mood="mysterious">Mysterious</button>
+  </div>
+
+  <p id="moodDisplay">Choose a mood...</p>
+
+  <script src="mood.js"></script>
+</body>
+</html>

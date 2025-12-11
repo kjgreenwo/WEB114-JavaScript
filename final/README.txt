@@ -1,0 +1,3 @@
+Katie Greenwood, 12.11.25, WEB114 Final README
+
+Behold, my final: a quote generator for finals week encouragement! The theme was inspired by my struggling through finals, and knowing that it's a hectic time for both students and professors! To create the code, I put a few quotes in an array, then made a function to randomly select a number within the amount in the array, and pick out the associated quote to then replace the text on the HTML page. I also drew a little guy giving you a thumbs up for extra encouragement.
